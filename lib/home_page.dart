@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+const homeBottomContainerHeight = 80.0;
+
+const activeCardColor = Color(0xFF1D1E33);
+const homeBottomContainerColor = Color(0xFFEB1555);
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -18,10 +23,10 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ResuableCard(colour: Color(0xFF1D1E33)),
+                  child: ResuableCard(colour: activeCardColor),
                 ),
                 Expanded(
-                  child: ResuableCard(colour: Color(0xFF1D1E33)),
+                  child: ResuableCard(colour: activeCardColor),
                 ),
               ],
             ),
@@ -30,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ResuableCard(colour: Color(0xFF1D1E33)),
+                  child: ResuableCard(colour: activeCardColor),
                 ),
               ],
             ),
@@ -39,14 +44,20 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ResuableCard(colour: Color(0xFF1D1E33)),
+                  child: ResuableCard(colour: activeCardColor),
                 ),
                 Expanded(
-                  child: ResuableCard(colour: Color(0xFF1D1E33)),
+                  child: ResuableCard(colour: activeCardColor),
                 ),
               ],
             ),
           ),
+          Container(
+            color: homeBottomContainerColor,
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: homeBottomContainerHeight,
+          )
         ],
       ),
     );
