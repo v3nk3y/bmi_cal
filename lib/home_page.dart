@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-
-const homeBottomContainerHeight = 80.0;
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'icon_content.dart';
+import 'reusable_card.dart';
 
 const activeCardColor = Color(0xFF1D1E33);
 const homeBottomContainerColor = Color(0xFFEB1555);
+const homeBottomContainerHeight = 80.0;
+const maleCardIcon = FontAwesomeIcons.mars;
+const femaleCardIcon = FontAwesomeIcons.venus;
+const maleCardText = 'MALE';
+const femaleCardText = 'FEMALE';
 
 class HomePage extends StatefulWidget {
   @override
@@ -23,10 +29,22 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ResuableCard(colour: activeCardColor),
+                  child: ReusableCard(
+                    colour: activeCardColor,
+                    cardChild: IconContent(
+                      iconName: maleCardIcon,
+                      iconLabel: maleCardText,
+                    ),
+                  ),
                 ),
                 Expanded(
-                  child: ResuableCard(colour: activeCardColor),
+                  child: ReusableCard(
+                    colour: activeCardColor,
+                    cardChild: IconContent(
+                      iconName: femaleCardIcon,
+                      iconLabel: femaleCardText,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -35,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ResuableCard(colour: activeCardColor),
+                  child: ReusableCard(colour: activeCardColor),
                 ),
               ],
             ),
@@ -44,10 +62,10 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ResuableCard(colour: activeCardColor),
+                  child: ReusableCard(colour: activeCardColor),
                 ),
                 Expanded(
-                  child: ResuableCard(colour: activeCardColor),
+                  child: ReusableCard(colour: activeCardColor),
                 ),
               ],
             ),
@@ -60,22 +78,6 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-    );
-  }
-}
-
-class ResuableCard extends StatelessWidget {
-  const ResuableCard({@required this.colour});
-  final Color colour;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: colour,
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-      margin: EdgeInsets.all(15.0),
     );
   }
 }
