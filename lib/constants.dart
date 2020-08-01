@@ -16,8 +16,10 @@ const kNumberTextStyle = TextStyle(
 );
 const kSliderMin = 120.0;
 const kSliderMax = 220.0;
+const kSliderThumbColor = Colors.white;
 const kSliderActiveColor = Color(0xFFEB1555);
 const kSliderInactiveColor = Color(0xFF8D8E98);
+const kSliderOverlayColor = Color(0x1fEB1555);
 
 // icon content
 const double kIconDefualtSize = 80.0;
