@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/widgets.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const activeCardColor = Color(0xFF1D1E33);
-const inactiveCardColor = Color(0xFF111328);
-const homeBottomContainerColor = Color(0xFFEB1555);
-const homeBottomContainerHeight = 80.0;
-const maleCardIcon = FontAwesomeIcons.mars;
-const femaleCardIcon = FontAwesomeIcons.venus;
-const maleCardText = 'MALE';
-const femaleCardText = 'FEMALE';
+import 'constants.dart';
 
 enum Gender { Male, Female }
 
@@ -23,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   Color maleCardColor = Color(0xFF111328);
   Color femaleCardColor = Color(0xFF111328);
   Gender selectedGender;
+  int height = 180;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +24,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('BMI Calculator'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: Row(
@@ -38,11 +32,11 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: ReusableCard(
                     colour: selectedGender == Gender.Male
-                        ? activeCardColor
-                        : inactiveCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: IconContent(
-                      iconName: maleCardIcon,
-                      iconLabel: maleCardText,
+                      iconName: kMaleCardIcon,
+                      iconLabel: kMaleCardText,
                     ),
                     onPress: () {
                       setState(() {
@@ -54,11 +48,11 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: ReusableCard(
                     colour: selectedGender == Gender.Female
-                        ? activeCardColor
-                        : inactiveCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: IconContent(
-                      iconName: femaleCardIcon,
-                      iconLabel: femaleCardText,
+                      iconName: kFemaleCardIcon,
+                      iconLabel: kFemaleCardText,
                     ),
                     onPress: () {
                       setState(() {
@@ -71,31 +65,63 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: ReusableCard(colour: activeCardColor),
-                ),
-              ],
+            child: ReusableCard(
+              colour: kActiveCardColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Height',
+                    style: kIconLabelStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: <Widget>[
+                      Text(
+                        height.toString(),
+                        style: kNumberTextStyle,
+                      ),
+                      Text(
+                        'cm',
+                        style: kIconLabelStyle,
+                      ),
+                    ],
+                  ),
+                  Slider(
+                    value: height.toDouble(),
+                    min: kSliderMin,
+                    max: kSliderMax,
+                    activeColor: kSliderActiveColor,
+                    inactiveColor: kSliderInactiveColor,
+                    onChanged: (double newValue) {
+                      setState(() {
+                        height = newValue.round();
+                      });
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(colour: activeCardColor),
+                  child: ReusableCard(colour: kActiveCardColor),
                 ),
                 Expanded(
-                  child: ReusableCard(colour: activeCardColor),
+                  child: ReusableCard(colour: kActiveCardColor),
                 ),
               ],
             ),
           ),
           Container(
-            color: homeBottomContainerColor,
+            color: kHomeBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: homeBottomContainerHeight,
+            height: kHomeBottomContainerHeight,
           )
         ],
       ),
