@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Height',
+                    kHeightCardText,
                     style: kIconLabelStyle,
                   ),
                   Row(
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                         style: kNumberTextStyle,
                       ),
                       Text(
-                        'cm',
+                        kHeightCardUnitText,
                         style: kIconLabelStyle,
                       ),
                     ],
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Weight',
+                          kWeightCardText,
                           style: kIconLabelStyle,
                         ),
                         Text(
@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Age',
+                          kAgeCardText,
                           style: kIconLabelStyle,
                         ),
                         Text(
