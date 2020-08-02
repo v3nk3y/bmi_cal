@@ -119,7 +119,46 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(colour: kActiveCardColor),
+                  child: ReusableCard(
+                    colour: kActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Weight',
+                          style: kIconLabelStyle,
+                        ),
+                        Text(
+                          '60',
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            FloatingActionButton(
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              backgroundColor: Color(0xFF4C4F5E),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            FloatingActionButton(
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              backgroundColor: Color(0xFF4C4F5E),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Expanded(
                   child: ReusableCard(colour: kActiveCardColor),
