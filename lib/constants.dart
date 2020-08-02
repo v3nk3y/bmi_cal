@@ -10,6 +10,10 @@ const kMaleCardIcon = FontAwesomeIcons.mars;
 const kFemaleCardIcon = FontAwesomeIcons.venus;
 const kMaleCardText = 'MALE';
 const kFemaleCardText = 'FEMALE';
+const kHeightCardText = 'HEIGHT';
+const kWeightCardText = 'WEIGHT';
+const kAgeCardText = 'AGE';
+const kHeightCardUnitText = 'cm';
 const kNumberTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
