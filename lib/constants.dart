@@ -28,3 +28,6 @@ const TextStyle kIconLabelStyle = TextStyle(
   fontSize: 18.0,
   color: Color(0xFF8D8E98),
 );
+
+// round icon button
+const kRoundIconButtonColor = Color(0xFF4C4F5E);

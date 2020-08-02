@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
 import 'constants.dart';
+import 'round_icon_button.dart';
 
 enum Gender { Male, Female }
 
@@ -16,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   Color femaleCardColor = Color(0xFF111328);
   Gender selectedGender;
   int height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -129,30 +132,30 @@ class _HomePageState extends State<HomePage> {
                           style: kIconLabelStyle,
                         ),
                         Text(
-                          '60',
+                          weight.toString(),
                           style: kNumberTextStyle,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            FloatingActionButton(
-                              onPressed: () {},
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                              backgroundColor: Color(0xFF4C4F5E),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  weight--;
+                                });
+                              },
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            FloatingActionButton(
-                              onPressed: () {},
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                              backgroundColor: Color(0xFF4C4F5E),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  weight++;
+                                });
+                              },
                             ),
                           ],
                         ),
