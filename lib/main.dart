@@ -1,7 +1,6 @@
-import 'package:bmi_cal/results_page.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'results_page.dart';
+import 'package:bmi_cal/screens/home_page.dart';
+import 'package:bmi_cal/screens/results_page.dart';
 
 void main() {
   runApp(BMICalculator());
