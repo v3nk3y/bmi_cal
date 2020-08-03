@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'bottom_button.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
 import 'constants.dart';
@@ -209,23 +210,11 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          GestureDetector(
+          BottomButton(
+            buttonText: kCalculateContainerText,
             onTap: () {
               Navigator.pushNamed(context, '/results');
             },
-            child: Container(
-              child: Center(
-                child: Text(
-                  kCalculateContainerText,
-                  style: kMainButtonTextStyle,
-                ),
-              ),
-              color: kHomeBottomContainerColor,
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kHomeBottomContainerHeight,
-              padding: EdgeInsets.only(bottom: 20),
-            ),
           )
         ],
       ),
