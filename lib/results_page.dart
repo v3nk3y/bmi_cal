@@ -19,7 +19,7 @@ class ResultsPage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(15.0),
               child: Text(
-                'Your Results',
+                kBMIResultsPageTitle,
                 style: kResultTitleTextStyle,
               ),
               alignment: Alignment.center,
@@ -33,7 +33,7 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text(
-                    'Normal',
+                    kBMIResultStatusText,
                     style: kBMIResultStatusTextStyle,
                   ),
                   Text(
@@ -41,7 +41,7 @@ class ResultsPage extends StatelessWidget {
                     style: kBMIResultValueTextStyle,
                   ),
                   Text(
-                    'Your BMI index is low, Please take some food!',
+                    kBMIResultContentText,
                     style: kBMIResultContentTextStyle,
                     textAlign: TextAlign.center,
                   )
@@ -50,7 +50,7 @@ class ResultsPage extends StatelessWidget {
             ),
           ),
           BottomButton(
-            buttonText: 'RE-CALCULATE',
+            buttonText: kBMIResultBottomButtonText,
             onTap: () {
               Navigator.pop(context);
             },

@@ -32,6 +32,8 @@ const kMainButtonTextStyle = TextStyle(
   fontSize: 20.0,
   fontWeight: FontWeight.bold,
 );
+
+const kBMIResultStatusText = 'Normal';
 const kResultTitleTextStyle = TextStyle(
   fontSize: 30.0,
   fontWeight: FontWeight.bold,
@@ -45,6 +47,9 @@ const kBMIResultValueTextStyle = TextStyle(
   fontSize: 100.0,
   fontWeight: FontWeight.bold,
 );
+const kBMIResultsPageTitle = 'Your Results';
+const kBMIResultBottomButtonText = 'RE-CALCULATE';
+const kBMIResultContentText = 'Your BMI index is low, Please take some food!';
 const kBMIResultContentTextStyle = TextStyle(
   fontSize: 20.0,
 );
