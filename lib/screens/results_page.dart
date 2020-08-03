@@ -4,6 +4,11 @@ import 'package:bmi_cal/components/reusable_card.dart';
 import 'package:bmi_cal/components/bottom_button.dart';
 
 class ResultsPage extends StatelessWidget {
+  ResultsPage({this.bmiValue, this.bmiStatus, this.bmiResult});
+  final String bmiValue;
+  final String bmiStatus;
+  final String bmiResult;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,17 +37,20 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text(
-                    kBMIResultStatusText,
+                    bmiStatus.toUpperCase(),
                     style: kBMIResultStatusTextStyle,
                   ),
                   Text(
-                    '18.0',
+                    bmiValue,
                     style: kBMIResultValueTextStyle,
                   ),
-                  Text(
-                    kBMIResultContentText,
-                    style: kBMIResultContentTextStyle,
-                    textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Text(
+                      bmiResult,
+                      style: kBMIResultContentTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
                   )
                 ],
               ),

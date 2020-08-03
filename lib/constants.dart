@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-// home page
+// Theme data
+const kPrimaryColor = Color(0xFF0A0E21);
+const kScaffoldBGColor = Color(0xFF0A0E21);
+
+// Home Screen
 const kActiveCardColor = Color(0xFF1D1E33);
 const kInactiveCardColor = Color(0xFF111328);
 const kHomeBottomContainerColor = Color(0xFFEB1555);
@@ -16,7 +20,6 @@ const kAgeCardText = 'AGE';
 const kHeightCardUnitText = 'cm';
 const kCalculateContainerText = 'CALCULATE';
 const kAppBarTitleText = 'BMI CALCULATOR';
-
 const kSliderMin = 120.0;
 const kSliderMax = 220.0;
 const kSliderThumbColor = Colors.white;
@@ -33,7 +36,9 @@ const kMainButtonTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-const kBMIResultStatusText = 'Normal';
+// Results screen
+const kBMIResultsPageTitle = 'Your Results';
+const kBMIResultBottomButtonText = 'RE-CALCULATE';
 const kResultTitleTextStyle = TextStyle(
   fontSize: 30.0,
   fontWeight: FontWeight.bold,
@@ -47,13 +52,11 @@ const kBMIResultValueTextStyle = TextStyle(
   fontSize: 100.0,
   fontWeight: FontWeight.bold,
 );
-const kBMIResultsPageTitle = 'Your Results';
-const kBMIResultBottomButtonText = 'RE-CALCULATE';
-const kBMIResultContentText = 'Your BMI index is low, Please take some food!';
 const kBMIResultContentTextStyle = TextStyle(
   fontSize: 20.0,
 );
-// icon content
+
+// Icon content
 const double kIconDefualtSize = 80.0;
 const double kSizedBoxHeight = 10.0;
 const TextStyle kIconLabelStyle = TextStyle(
@@ -61,5 +64,5 @@ const TextStyle kIconLabelStyle = TextStyle(
   color: Color(0xFF8D8E98),
 );
 
-// round icon button
+// Round icon button
 const kRoundIconButtonColor = Color(0xFF4C4F5E);

@@ -1,3 +1,4 @@
+import 'package:bmi_cal/screens/results_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:bmi_cal/constants.dart';
@@ -6,6 +7,7 @@ import 'package:bmi_cal/components/reusable_card.dart';
 import 'package:bmi_cal/components/bottom_button.dart';
 import 'package:bmi_cal/components/round_icon_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:bmi_cal/bmi_calculator.dart';
 
 enum Gender { Male, Female }
 
@@ -211,11 +213,21 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           BottomButton(
-            buttonText: kCalculateContainerText,
-            onTap: () {
-              Navigator.pushNamed(context, '/results');
-            },
-          )
+              buttonText: kCalculateContainerText,
+              onTap: () {
+                BMICalculator calc =
+                    BMICalculator(height: height, weight: weight);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResultsPage(
+                      bmiValue: calc.calculateBMIValue(),
+                      bmiStatus: calc.getBMIStatus(),
+                      bmiResult: calc.getBMIResult(),
+                    ),
+                  ),
+                );
+              })
         ],
       ),
     );
