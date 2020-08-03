@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title: Text(kAppBarTitleText),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -209,11 +209,19 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Container(
-            color: kHomeBottomContainerColor,
-            margin: EdgeInsets.only(top: 10.0),
-            width: double.infinity,
-            height: kHomeBottomContainerHeight,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/results');
+            },
+            child: Container(
+              child: Text(
+                kCalculateContainerText,
+              ),
+              color: kHomeBottomContainerColor,
+              margin: EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: kHomeBottomContainerHeight,
+            ),
           )
         ],
       ),

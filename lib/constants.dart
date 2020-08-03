@@ -14,6 +14,8 @@ const kHeightCardText = 'HEIGHT';
 const kWeightCardText = 'WEIGHT';
 const kAgeCardText = 'AGE';
 const kHeightCardUnitText = 'cm';
+const kCalculateContainerText = 'CALCULATE';
+const kAppBarTitleText = 'BMI CALCULATOR';
 const kNumberTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
