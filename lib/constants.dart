@@ -32,7 +32,22 @@ const kMainButtonTextStyle = TextStyle(
   fontSize: 20.0,
   fontWeight: FontWeight.bold,
 );
-
+const kResultTitleTextStyle = TextStyle(
+  fontSize: 30.0,
+  fontWeight: FontWeight.bold,
+);
+const kBMIResultStatusTextStyle = TextStyle(
+  fontSize: 20.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.green,
+);
+const kBMIResultValueTextStyle = TextStyle(
+  fontSize: 100.0,
+  fontWeight: FontWeight.bold,
+);
+const kBMIResultContentTextStyle = TextStyle(
+  fontSize: 20.0,
+);
 // icon content
 const double kIconDefualtSize = 80.0;
 const double kSizedBoxHeight = 10.0;
