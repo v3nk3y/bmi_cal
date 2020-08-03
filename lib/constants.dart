@@ -16,16 +16,22 @@ const kAgeCardText = 'AGE';
 const kHeightCardUnitText = 'cm';
 const kCalculateContainerText = 'CALCULATE';
 const kAppBarTitleText = 'BMI CALCULATOR';
-const kNumberTextStyle = TextStyle(
-  fontSize: 50.0,
-  fontWeight: FontWeight.w900,
-);
+
 const kSliderMin = 120.0;
 const kSliderMax = 220.0;
 const kSliderThumbColor = Colors.white;
 const kSliderActiveColor = Color(0xFFEB1555);
 const kSliderInactiveColor = Color(0xFF8D8E98);
 const kSliderOverlayColor = Color(0x1fEB1555);
+
+const kNumberTextStyle = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.w900,
+);
+const kMainButtonTextStyle = TextStyle(
+  fontSize: 20.0,
+  fontWeight: FontWeight.bold,
+);
 
 // icon content
 const double kIconDefualtSize = 80.0;

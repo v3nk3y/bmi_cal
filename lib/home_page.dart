@@ -214,13 +214,17 @@ class _HomePageState extends State<HomePage> {
               Navigator.pushNamed(context, '/results');
             },
             child: Container(
-              child: Text(
-                kCalculateContainerText,
+              child: Center(
+                child: Text(
+                  kCalculateContainerText,
+                  style: kMainButtonTextStyle,
+                ),
               ),
               color: kHomeBottomContainerColor,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
               height: kHomeBottomContainerHeight,
+              padding: EdgeInsets.only(bottom: 20),
             ),
           )
         ],
